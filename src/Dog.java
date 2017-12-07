@@ -21,4 +21,16 @@ public class Dog extends Animal {
         System.out.println("randNum in method: " + randNum);
     }
 
+    private void bePrivate() {
+
+        System.out.println("In a private method");
+
+    }
+
+    public void accessPrivate() {
+        // Can access information in private methods; What's the point? ¯\_(ツ)_/¯.
+        bePrivate();
+
+    }
+
 }
