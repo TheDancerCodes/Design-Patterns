@@ -1,6 +1,8 @@
+package oop_concepts;
+
 public class Dog extends Animal {
 
-    // A new method unique to a Dog
+    // A new method unique to a oop_concepts.Dog
     public void digHole() {
         System.out.println("Dug a hole!");
     }
@@ -8,7 +10,7 @@ public class Dog extends Animal {
     // A constructor to initialize every object that is created
     public Dog() {
 
-        // Reference the constructor file/ initializer for the super class <Animal>
+        // Reference the constructor file/ initializer for the super class <OOP_Concepts.Animal>
         super();
 
         setSound("Bark");

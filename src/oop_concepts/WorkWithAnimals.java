@@ -1,3 +1,5 @@
+package oop_concepts;
+
 /*
   This file brings all the functionality of the other classes together
  */
@@ -31,20 +33,20 @@ public class WorkWithAnimals {
           Any changes to this object will affect this object across all your code.
          */
         changeObjectname(rex);
-        System.out.println("Dog name after method call: " + rex.getName());
+        System.out.println("oop_concepts.Dog name after method call: " + rex.getName());
 
 
-        // Create Cat & Dog Object with the super class:
+        // Create oop_concepts.Cat & oop_concepts.Dog Object with the super class:
         // Refer to sub-classes by their super class type.
         Animal doggy = new Dog();
         Animal kitty = new Cat();
 
-        // NB: Even though they are both Animal objects, they automatically call the right method defined inside
+        // NB: Even though they are both OOP_Concepts.Animal objects, they automatically call the right method defined inside
         // their individual classes.
         System.out.println("Doggy says: " + doggy.getSound());
         System.out.println("Kitty says: " + kitty.getSound());
 
-        // By referring to sub-classes by their super class type, we can create arrays that have Animal objects.
+        // By referring to sub-classes by their super class type, we can create arrays that have OOP_Concepts.Animal objects.
         Animal[] animals = new Animal[4];
         animals[0] = doggy;
         animals[1] = kitty;
@@ -53,13 +55,13 @@ public class WorkWithAnimals {
         System.out.println("Doggy says: " + animals[0].getSound());
         System.out.println("Kitty says: " + animals[1].getSound());
 
-        // You can send Animal objects for processing inside a method
+        // You can send OOP_Concepts.Animal objects for processing inside a method
         speakAnimal(doggy);
 
-        // NB: You can't reference methods or fields that are not in Animal <super class>
-        // *Method digHole() is undefined for the type Animal*
+        // NB: You can't reference methods or fields that are not in OOP_Concepts.Animal <super class>
+        // *Method digHole() is undefined for the type OOP_Concepts.Animal*
         //doggy.digHole();
-        // You can still use it by casting it to become a Dog object.
+        // You can still use it by casting it to become a oop_concepts.Dog object.
         ((Dog)doggy).digHole();
 
 
@@ -74,14 +76,14 @@ public class WorkWithAnimals {
 
 
         // NB: You cannot call a private method even if you define it inside a subclass.
-        // *'bePrivate' has private access in 'Dog'*
+        // *'bePrivate' has private access in 'oop_concepts.Dog'*
         // rex.bePrivate();
 
         // Accessing a private method using a public method accessPrivate()
         rex.accessPrivate();
 
 
-        // Rhino object
+        // oop_concepts.Rhino object
         Rhino rhino = new Rhino();
         rhino.setName("Timon");
         System.out.println(rhino.getName());
@@ -101,7 +103,7 @@ public class WorkWithAnimals {
 
     public static void speakAnimal(Animal randAnimal) {
 
-        System.out.println("Animal says: " + randAnimal.getSound());
+        System.out.println("OOP_Concepts.Animal says: " + randAnimal.getSound());
     }
 
     public void sayHello() {

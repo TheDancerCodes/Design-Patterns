@@ -1,3 +1,5 @@
+package oop_concepts;
+
 public class Animal {
 
     private String name;
